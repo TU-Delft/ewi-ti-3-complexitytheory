@@ -171,16 +171,16 @@ Een probleem A is NP-compleet (onder $\leq$) als geldt dat:
 \end{figure}
 
 \section*{Bewijs met restrictie}
-
 Een beslissingsprobleem A is een restrictie van een probleem B als:
 
 \begin{itemize}
 \item Yes$_\text{A}$ $\subseteq$ Yes$_\text{B}$
 \item No$_\text{A}$ $\subseteq$ No$_\text{B}$
 \end{itemize}
+NB: het omgekeerde geldt niet, dit is een verschil met reductie.
 
 \begin{description}
-\item[Als A een restrictie is van B] dan geldt A $\leq$ B
+\item[Als probleem A een restrictie is van B] dan kan ieder algoritme voor probleem B gebruikt worden om probleem A op te lossen, er geldt A $\leq$ B.
 \end{description}
 
 Om aan te tonen dat B een NP-compleet probleem is:
@@ -189,6 +189,8 @@ Om aan te tonen dat B een NP-compleet probleem is:
 \item Bewijs dat B $\in$ NP
 \item Bewijs dat een bekend NP-hard probleem A een restrictie is van B
 \end{itemize}
+
+Een voorbeeld van restrictie is PARTITION, wat een restrictie van SUBSUM is met $t = \lfloor (\sum_{s \in S} s) / 2 \rfloor$.
 
 \section*{Ruimtecomplexiteit}
 
